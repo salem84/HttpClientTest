@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace HttpClientTest
 {
-    class Service
+    class SampleService
     {
         public readonly HttpClient httpClient;
 
-        public Service(HttpClient httpClient)
+        public SampleService(HttpClient httpClient)
         {
             this.httpClient = httpClient;
         }
