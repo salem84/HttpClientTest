@@ -39,7 +39,6 @@ namespace HttpClientTest
             {
                 options.BaseAddress = new Uri("https://petstore.swagger.io/v2/");
             });
-
             services.AddTransient<SampleService>();
 
             var serviceProvider = services.BuildServiceProvider();
@@ -47,7 +46,7 @@ namespace HttpClientTest
             // Act
             var s = serviceProvider.GetRequiredService<SampleService>();
 
-            // Assert
+            // Assert (here baseaddress is null)
             var baseAddress = s.httpClient.BaseAddress;
             Assert.Null(baseAddress);
 
